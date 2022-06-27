@@ -1,0 +1,13 @@
+name = "Hugo Minimalist Theme"
+license = "MIT"
+licenselink = "https://github.com/namwa/minimalist-theme/blob/master/LICENSE"
+description = "Hugo Minimalist Theme is a portfolio and blogging theme"
+
+homepage = "http://example.com/"
+tags = ["blog", "minimal", "clean", "tailwind css"]
+features = ["blog]
+min_version = "0.41.0"
+
+[author]
+  name = "Namwa Sawasdiworn"
+  homepage = "https://www.namwa.dev"
