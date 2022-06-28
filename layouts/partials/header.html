@@ -1,71 +1,69 @@
-<header>
-  <div class="py-4">
-    <nav class="container mx-auto flex items-center justify-between px-4 border-b
-      border-gray-300 py-2.5" aria-label="Main Navigation">
-      <div class="flex items-center flex-1">
-        <div class="flex items-center justify-between w-full md:w-auto">
-          <a href="{{.Site.BaseURL}}" class="font-semibold tracking-tighter text-lg md:text-xl">
-            {{ .Site.Title }}
-          </a>
-          <div class="-mr-2 flex items-center md:hidden">
-            <button type="button" id="hamburger" class="border border-gray-200 rounded-md p-2
-              text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+<header class="py-4">
+  <nav class="flex items-center justify-between px-4 border-b
+    border-gray-300 py-2.5" aria-label="Main Navigation">
+    <div class="flex items-center flex-1">
+      <div class="flex items-center justify-between w-full md:w-auto">
+        <a href="{{.Site.BaseURL}}" class="font-semibold tracking-tighter text-lg md:text-xl">
+          {{ .Site.Title }}
+        </a>
+        <div class="-mr-2 flex items-center md:hidden">
+          <button type="button" id="hamburger" class="border border-gray-200 rounded-md p-2
+            text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden md:flex space-x-6">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <span class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ else }}
+        text-gray-600 hover:text-gray-800 hover:underline{{ end }}">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </span>
+      {{end}}
+    </div>
+    <a href="{{ "contact" | absURL }}" class="hidden md:inline-flex items-center mx-6 btn btn-primary">
+      Hire me
+    </a>
+  </nav>
+  {{/* Mobile nav */}}
+  <div id="menu" class="hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+    <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+      <div class="pt-5 pb-6 px-5">
+        <div class="flex items-center justify-between">
+          <div class="font-bold text-primary-900">
+            <a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a>
+          </div>
+          <div class="-mr-2">
+            <button type="button" id="close-button" class="rounded-md p-2 text-gray-400
+              hover:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
         </div>
-      </div>
-
-      <div class="hidden md:flex space-x-6">
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-          <span class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ else }}
-          text-gray-600 hover:text-gray-800 hover:underline{{ end }}">
-            <a href="{{ .URL }}">{{ .Name }}</a>
-          </span>
-        {{end}}
-      </div>
-      <a href="{{ "contact" | absURL }}" class="hidden md:inline-flex items-center mx-6 btn btn-primary">
-        Hire me
-      </a>
-    </nav>
-    {{/* Mobile nav */}}
-    <div id="menu" class="hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-      <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-        <div class="pt-5 pb-6 px-5">
-          <div class="flex items-center justify-between">
-            <div class="font-bold text-primary-900">
-              <a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a>
-            </div>
-            <div class="-mr-2">
-              <button type="button" id="close-button" class="rounded-md p-2 text-gray-400
-                hover:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500">
-                <span class="sr-only">Close menu</span>
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="mt-6">
-            <nav class="grid gap-y-2">
-              {{ $currentPage := . }}
-              {{ range .Site.Menus.main }}
-                <span class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ else }}text-gray-600{{ end }}">
-                  <a href="{{ .URL }}">{{ .Name }}</a>
-                </span>
-              {{end}}
-            </nav>
-          </div>
+        <div class="mt-6">
+          <nav class="grid gap-y-2">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+              <span class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ else }}text-gray-600{{ end }}">
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              </span>
+            {{end}}
+          </nav>
         </div>
-        <div class="py-6 px-5 space-y-2">
-          <a href="{{ "contact" | absURL }}" class="btn btn-fullwidth btn-primary">
-            Hire me
-          </a>
-        </div>
+      </div>
+      <div class="py-6 px-5 space-y-2">
+        <a href="{{ "contact" | absURL }}" class="btn btn-fullwidth btn-primary">
+          Hire me
+        </a>
       </div>
     </div>
   </div>
