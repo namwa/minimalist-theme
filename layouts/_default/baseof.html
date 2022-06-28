@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html class="font-body">
   {{- partial "head.html" . -}}
-  <body>
+  <body class="h-screen container mx-auto">
     {{- partial "header.html" . -}}
-    <h1 class="text-pink-500">test</h1>
-    <div id="content">
+    <div>
     {{- block "main" . }}{{- end }}
     </div>
     {{- partial "footer.html" . -}}

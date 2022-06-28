@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ['./layouts/**/*.html'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'display': ['Merriweather', 'serif'],
+        'body': ['Lato', 'sans-serif']
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('prettier-plugin-tailwindcss')],
 }
