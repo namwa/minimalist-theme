@@ -1,14 +1,15 @@
 <header>
-  <div class="py-4 md:py-10">
+  <div class="py-4">
     <nav class="container mx-auto flex items-center justify-between px-4 border-b
       border-gray-300 py-2.5" aria-label="Main Navigation">
       <div class="flex items-center flex-1">
         <div class="flex items-center justify-between w-full md:w-auto">
-          <a href="{{.Site.BaseURL}}" class="font-semibold tracking-tighter text-lg md:text-xl">{{ .Site.Title }}</a>
+          <a href="{{.Site.BaseURL}}" class="font-semibold tracking-tighter text-lg md:text-xl">
+            {{ .Site.Title }}
+          </a>
           <div class="-mr-2 flex items-center md:hidden">
-            <button type="button" id="menu-button" class="bg-primary-900 rounded-md p-2 inline-flex
-              items-center justify-center text-primary-100 hover:bg-primary-700 focus:outline-none
-              focus:ring-2 focus-ring-inset focus:ring-primary-100">
+            <button type="button" id="hamburger" class="border border-gray-200 rounded-md p-2
+              text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500">
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -39,9 +40,11 @@
               <a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a>
             </div>
             <div class="-mr-2">
-              <button type="button" id="close-button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+              <button type="button" id="close-button" class="rounded-md p-2 text-gray-400
+                hover:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500">
                 <span class="sr-only">Close menu</span>
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -59,11 +62,9 @@
           </div>
         </div>
         <div class="py-6 px-5 space-y-2">
-          <div>
-            <a href="{{ "contact" | absURL }}" class="btn btn-fullwidth btn-primary">
-              Hire me
-            </a>
-          </div>
+          <a href="{{ "contact" | absURL }}" class="btn btn-fullwidth btn-primary">
+            Hire me
+          </a>
         </div>
       </div>
     </div>
