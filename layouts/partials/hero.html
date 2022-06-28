@@ -1,0 +1,20 @@
+<section>
+  <div class="py-20 grid md:grid-cols-2 justify-items-center items-center">
+    <div class="h-full w-2/3">
+      <img src="{{ .Site.Data.hero.image | relURL }}" alt="{{ .Site.Data.hero.name }}">
+    </div>
+    <div>
+      <h1 class="font-[700] text-4xl text-gray-800">
+        {{ .Site.Data.hero.title }}
+      </h1>
+      <p class="my-4 text-gray-600">{{ .Site.Data.hero.body }}</p>
+    </div>
+  </div>
+  <div class="text-fuchsia-600 flex justify-end">
+    <a href="#">
+      <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+      </svg>
+    </a>
+  </div>
+</section>
