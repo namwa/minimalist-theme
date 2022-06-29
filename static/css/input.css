@@ -21,4 +21,10 @@
   .active {
     @apply text-fuchsia-600 font-semibold hover:underline;
   }
+  .card-inner-text p{
+    @apply my-6;
+  }
+  .card-inner-text h3 {
+    @apply: text-2xl;
+  }
 }
