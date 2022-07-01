@@ -1,0 +1,26 @@
+<section>
+  <div class="py-6 px-4 md:py-20">
+    <div class="text-center">
+      <p class="text-gray-600 mb-2.5 text-lg">{{ .Site.Data.projects.title }}</p>
+      <h2 class="text-gray-800 font-semibold text-3xl">{{ .Site.Data.projects.topTitle }}</h2>
+    </div>
+    <div class="my-12">
+      <div class="grid gap-5 lg:grid-cols-2">
+        {{- range first 2 $.Site.RegularPages }}
+        <a href="{{ .Permalink }}" class="card">
+          <div class="">
+            <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="h-48 w-full object-cover">
+          </div>
+          <div class="px-6 mb-4">
+            <h3 class="font-medium my-4">{{ .Title }}</h3>
+            <p>{{ .Params.subTitle }}</p>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+      <div class="flex justify-end mt-4">
+        <button class="btn btn-ghost">View all projects</button>
+      </div>
+    </div>
+  </div>
+</section>
