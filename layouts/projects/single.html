@@ -1,0 +1,11 @@
+{{- define "main" }}
+<div class="py-6 px-4 md:py-20">
+  <h1 class="title pb-8 md:pb-20 text-4xl md:text-6xl">{{ .Title }}</h1>
+  {{ if .Params.image }}
+    <img src="{{ .Params.image | relURL }}">
+  {{ end }}
+  <div class="my-10 content">
+    {{ .Content }}
+  </div>
+</div>
+{{- end }}

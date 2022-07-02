@@ -9,6 +9,9 @@
 }
 
 @layer components {
+  .title {
+    @apply font-[700] text-3xl md:text-4xl text-gray-800;
+  }
   .btn {
     @apply px-4 py-2 border border-transparent text-sm leading-4 font-semibold rounded-md shadow-sm;
   }
@@ -31,6 +34,42 @@
     @apply my-6;
   }
   .card-inner-text h3 {
-    @apply: text-2xl;
+    @apply text-2xl;
+  }
+  .content h1 {
+    @apply text-4xl py-4;
+  }
+  .content h2 {
+    @apply text-3xl py-4;
+  }
+  .content h3 {
+    @apply text-2xl py-4;
+  }
+  .content p {
+    @apply py-2.5 text-base;
+  }
+  .content a {
+    @apply underline decoration-fuchsia-600 text-fuchsia-600;
+  }
+  .content strong {
+    @apply font-semibold
+  }
+  .content ul, ol {
+    @apply my-4
+  }
+  .content li {
+    @apply list-disc ml-4;
+  }
+  .content .highlight {
+    @apply py-4;
+  }
+  .content .highlight pre {
+    @apply font-mono py-4 px-4;
+  }
+  .content blockquote {
+    @apply ml-4 border-l-4 border-fuchsia-600;
+  }
+  .content blockquote p {
+    @apply ml-4;
   }
 }

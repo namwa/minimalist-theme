@@ -8,9 +8,7 @@
       <div class="grid gap-5 lg:grid-cols-2">
         {{- range first 2 $.Site.RegularPages }}
         <a href="{{ .Permalink }}" class="card">
-          <div class="">
-            <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="h-48 w-full object-cover">
-          </div>
+          <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="h-48 w-full object-cover">
           <div class="px-6 mb-4">
             <h3 class="font-medium my-4">{{ .Title }}</h3>
             <p>{{ .Params.description }}</p>
