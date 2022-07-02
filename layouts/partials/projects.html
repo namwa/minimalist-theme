@@ -17,7 +17,9 @@
         {{ end }}
       </div>
       <div class="flex justify-end mt-4">
-        <button class="btn btn-ghost">View all projects</button>
+        <a href="{{ .Site.Data.projects.buttonTarget | absURL}}" class="btn btn-ghost">
+          View {{ .Site.Data.projects.title }}
+        </a>
       </div>
     </div>
   </div>
