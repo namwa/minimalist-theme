@@ -3,7 +3,7 @@
     border-gray-300 py-2.5" aria-label="Main Navigation">
     <div class="flex items-center flex-1">
       <div class="flex items-center justify-between w-full md:w-auto">
-        <a href="{{.Site.BaseURL}}" class="font-semibold tracking-tighter text-lg md:text-xl">
+        <a href="{{ .Site.BaseURL }}" class="font-semibold tracking-tighter text-lg md:text-xl">
           {{ .Site.Title }}
         </a>
         <div class="-mr-2 flex items-center md:hidden">
@@ -18,7 +18,7 @@
     </div>
 
     <div class="hidden md:flex space-x-6">
-      {{ $currentPage := . }}
+      {{ $currentPage :=  . }}
       {{ range .Site.Menus.main }}
         <span class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ else }}
         text-gray-600 hover:text-gray-800 hover:underline{{ end }}">
