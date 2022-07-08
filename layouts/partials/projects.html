@@ -5,8 +5,8 @@
       <h2 class="text-gray-800 font-semibold text-3xl">{{ .Site.Data.projects.topTitle }}</h2>
     </div>
     <div class="my-12">
-      <div class="grid gap-5 lg:grid-cols-2">
-        {{- range first 2 $.Site.RegularPages }}
+      <div class="grid gap-5 lg:grid-cols-3">
+        {{ range ( where .Site.RegularPages "Type" "projects" ) | first 3 }}
         <a href="{{ .Permalink }}" class="card">
           <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="h-48 w-full object-cover">
           <div class="px-6 mb-4">
