@@ -1,0 +1,33 @@
+{{- define "main" }}
+<div class="py-6 px-4 md:py-20">
+  <div class="mt-12 grid md:grid-cols-6 md:gap-16">
+    <section class="md:col-span-4">
+      <h1 class="title text-center text-4xl md:text-6xl">{{ .Title }}</h1>
+      <div class="text-center text-sm text-gray-700 mt-6 mb-16">
+        {{ if .Params.author }}
+          <span class="">{{ .Params.author }}</span>
+          <small>|</small>
+          <span>{{ .Date.Format "2 Jan 2006" }}</span>
+        {{ else }}
+          <span>{{ .Date.Format "2 Jan 2006" }}</span>
+        {{- end }}
+      </div>
+      {{ if .Params.image }}
+        <img src="{{ .Params.image | relURL }}">
+      {{ end }}
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </section>
+
+    {{ if .Params.toc | default true }}
+    <aside class="hidden md:block md:col-span-2">
+      <div class="toc">
+        <h5 class="mb-6 text-2xl font-semibold tracking-wider">Table of Contents</h5>
+        {{ .TableOfContents }}
+      </div>
+    </aside>
+    {{- end }}
+  </div>
+</div>
+{{- end }}
