@@ -72,4 +72,8 @@
   .content blockquote p {
     @apply ml-4;
   }
+  .tags {
+    @apply px-2.5 py-2 mx-1 border border-gray-300 text-sm rounded-md bg-gray-50
+      text-gray-500 hover:bg-gray-100 hover:text-fuchsia-600;
+  }
 }

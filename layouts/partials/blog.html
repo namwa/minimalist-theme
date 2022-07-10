@@ -12,7 +12,7 @@
           <div class="px-6 mb-4 flex flex-col justify-between">
             <h3 class="font-medium my-4">{{ .Title }}</h3>
             <p>{{ .Params.description | truncate 30 }}</p>
-            <p class="text-sm text-gray-600">{{ dateFormat "2 Jan 2006" .Params.date }}</p>
+            <p class="text-sm text-gray-600">{{ dateFormat "2 Jan 2006" .Date }}</p>
           </div>
         </a>
         {{ end }}
