@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="font-body">
+<html class="font-body scroll-smooth">
   {{- partial "head.html" . -}}
-  <body class="h-screen max-w-5xl mx-auto">
+  <body class="h-screen">
     {{- partial "header.html" . -}}
-    <div>
+    <div class="max-w-5xl mx-auto">
     {{- block "main" . }}{{- end }}
     </div>
     {{- partial "footer.html" . -}}
