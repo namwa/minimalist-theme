@@ -1,0 +1,36 @@
+baseURL: /
+languageCode: en-us
+title: Jane Doe
+themesDir: themes
+theme: minimalist-theme
+paginate: 3
+menu:
+  main:
+    - pageRef: /
+      name: Home
+      url: /
+      weight: 1
+    - pageRef: projects
+      name: Projects
+      url: /projects/
+      weight: 2
+    - pageRef: blog
+      name: Blog
+      url: /blog/
+      weight: 3
+    - pageRef: about
+      name: About
+      url: /about/
+      weight: 4
+markup:
+  tableOfContents:
+    endLevel: 3
+params:
+  github: 'https://github.com'
+  linkedin: 'https://linkedin.com'
+  twitter: 'https://twitter.com'
+  instagram: 'https://instagram.com'
+  facebook: 'https://facebook.com'
+  dribbble: 'https://dribbble.com/'
+  cta:
+    enable: true
