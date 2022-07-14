@@ -3,7 +3,10 @@ languageCode: en-us
 title: Jane Doe
 themesDir: themes
 theme: minimalist-theme
+
 paginate: 3
+googleAnalytics: G-MEASUREMENT_ID
+
 menu:
   main:
     - pageRef: /
@@ -22,10 +25,18 @@ menu:
       name: About
       url: /about/
       weight: 4
+
 markup:
   tableOfContents:
     endLevel: 3
+
 params:
+  title: Jane's Doe
+  description: This is Jane's Doe portfolio
+  images:
+  - author.jpg
+
+  # Social networks on footer
   github: 'https://github.com'
   linkedin: 'https://linkedin.com'
   twitter: 'https://twitter.com'
