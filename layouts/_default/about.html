@@ -1,13 +1,19 @@
 {{- define "main" }}
 <div class="py-6 px-4 md:py-20">
-  <h1 class="title text-center pb-8 md:pb-10">{{ .Title }}</h1>
-  {{ if .Params.image }}
-  <div class="max-w-3xl mx-auto">
-    <img src="{{ .Params.image | relURL }}" class="object-cover rounded-md">
-  </div>
-  {{ end }}
-  <div class="my-10 content">
-    {{.Content}}
+  <h1 class="title text-center pb-8 md:pb-10 block md:hidden">{{ .Title }}</h1>
+  <div class="grid md:grid-cols-2 justify-items-center items-center">
+    {{ if .Params.image }}
+    <div class="max-w-3xl mx-auto h-full md:w-2/3 mt-8 md:mt-0">
+      <img src="{{ .Params.image | relURL }}" class="object-cover rounded-md">
+    </div>
+    {{ end }}
+    <div>
+      <h1 class="title hidden md:block">{{ .Title }}</h1>
+      <p class="mt-6 text-xl">{{ .Description }}</p>
+      <div class="my-4 text-gray-600 content">
+        {{.Content}}
+      </div>
+    </div>
   </div>
 </div>
 {{- end}}
