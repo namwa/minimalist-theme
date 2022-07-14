@@ -2,7 +2,7 @@
 <div class="py-6 px-4 md:py-20">
   <div class="mt-12 grid md:grid-cols-6 md:gap-16">
     <section class="md:col-span-4">
-      <h1 class="title text-center text-4xl md:text-6xl">{{ .Title }}</h1>
+      <h1 class="title text-center pb-8 md:pb-10">{{ .Title }}</h1>
       <div class="text-center text-sm text-gray-700 mt-6 mb-16">
         {{ if .Params.author }}
           <span class="">{{ .Params.author }}</span>
@@ -13,9 +13,11 @@
         {{- end }}
       </div>
       {{ if .Params.image }}
-        <img src="{{ .Params.image | relURL }}">
+        <div class="max-w-3xl mx-auto">
+          <img src="{{ .Params.image | relURL }}" class="object-cover rounded-md">
+        </div>
       {{ end }}
-      <div class="content">
+      <div class="my-10 content">
         {{ .Content }}
       </div>
       <a href="{{ .Site.BaseURL}}/{{ .Section }}" class="btn btn-ghost inline-block my-10">

@@ -1,8 +1,10 @@
 {{- define "main" }}
 <div class="py-6 px-4 md:py-20">
-  <h1 class="title text-center pb-8 md:pb-20 text-4xl md:text-6xl">{{ .Title }}</h1>
+  <h1 class="title text-center pb-8 md:pb-10">{{ .Title }}</h1>
   {{ if .Params.image }}
-    <img src="{{ .Params.image | relURL }}">
+  <div class="max-w-3xl mx-auto">
+    <img src="{{ .Params.image | relURL }}" class="object-cover rounded-md">
+  </div>
   {{ end }}
   <div class="my-10 content">
     {{ .Content }}
