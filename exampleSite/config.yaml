@@ -36,12 +36,19 @@ params:
   images:
   - author.jpg
 
+  # Contact
+  contact:
+    enable: true
+    content: Feel free to reach out if you're looking for a developer, have a question, or just want to connect
+    email: janedoe@email.com
+    btnName: Mail me
+
   # Social networks on footer
-  github: 'https://github.com'
-  linkedin: 'https://linkedin.com'
-  twitter: 'https://twitter.com'
-  instagram: 'https://instagram.com'
-  facebook: 'https://facebook.com'
-  dribbble: 'https://dribbble.com/'
+  github: https://github.com
+  linkedin: https://linkedin.com
+  twitter: https://twitter.com
+  instagram: https://instagram.com
+  facebook: https://facebook.com
+  dribbble: https://dribbble.com
   cta:
     enable: true
