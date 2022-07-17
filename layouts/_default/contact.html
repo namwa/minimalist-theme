@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="py-6 px-4 md:py-20">
+  <h1 class="title text-center">Contact</h1>
+  <div class="py-10">
+    <p>{{ .Content }}</p>
+  </div>
+  <div class="flex justify-center">
+    <a href="mailto:{{ .Site.Params.contact.email }}"
+      class="inline-block btn btn-ghost">
+      {{ .Site.Params.contact.btnName }}
+    </a>
+  </div>
+</div>
+{{- end }}
