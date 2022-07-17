@@ -1,3 +1,4 @@
+{{ if .Site.Params.projects.enable | default true }}
 <section>
   <div class="py-6 px-4 md:py-20 border-b border-gray-200">
     <div class="text-center">
@@ -16,11 +17,7 @@
         </a>
         {{ end }}
       </div>
-      <div class="flex justify-end mt-4">
-        <a href="{{ .Site.Data.projects.buttonTarget | absURL}}" class="btn btn-ghost">
-          View {{ .Site.Data.projects.title }}
-        </a>
-      </div>
     </div>
   </div>
 </section>
+{{- end }}

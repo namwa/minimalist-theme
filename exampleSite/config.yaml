@@ -36,6 +36,22 @@ params:
   images:
   - author.jpg
 
+  # Services section
+  services:
+    enable: true
+
+  # Projects section
+  projects:
+    enable: true
+
+  # Blog section
+  blog:
+    enable: true
+
+  # CTA section
+  cta:
+    enable: true
+
   # Contact
   contact:
     enable: true
@@ -50,5 +66,3 @@ params:
   instagram: https://instagram.com
   facebook: https://facebook.com
   dribbble: https://dribbble.com
-  cta:
-    enable: true
