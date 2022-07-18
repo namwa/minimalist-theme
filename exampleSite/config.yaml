@@ -1,7 +1,6 @@
 baseURL: /
 languageCode: en-us
 title: Jane Doe
-themesdir: ../..
 theme: minimalist-theme
 
 paginate: 3
