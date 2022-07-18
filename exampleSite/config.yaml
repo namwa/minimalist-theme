@@ -1,7 +1,8 @@
 baseURL: /
 languageCode: en-us
 title: Jane Doe
-themesdir: "../.."
+theme: minimalist-theme
+themesDir: ../..
 paginate: 3
 googleAnalytics: G-MEASUREMENT_ID
 
