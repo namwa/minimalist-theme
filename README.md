@@ -2,6 +2,37 @@
 
 Hugo Minimalist Theme is a portfolio and blogging theme.
 
+Live Demo: https://hugo-minimalist-theme.netlify.app
+
+## Requirements
+- Hugo Version 0.96+extended
+
+## Installation
+
+You need to install Hugo first before using this theme.
+Please follow the official [installation guide](https://gohugo.io/getting-started/installing/).
+
+## Check Hugo version.
+```
+hugo version
+```
+## Create a new Hugo Site
+
+```
+hugo new site myNewHugoSite
+```
+
+Hugo site will be created in `myNewHugoSite` folder.
+
+## Install theme
+
+Clone this repo inside your themes folder.
+
+```
+cd themes
+git clone https://github.com/namwa/minimalist-theme.git
+```
+
 To create a blog post uses a command below. It will create a new blog type of content
 file based on the archetype template. Blog type archetype includes tags and toc (table of content).
 ```
