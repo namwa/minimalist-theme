@@ -4,6 +4,9 @@ Hugo Minimalist Theme is a portfolio and blogging theme.
 
 Live Demo: https://hugo-minimalist-theme.netlify.app
 
+![hugo-minimalist-theme netlify app_ (1)](https://user-images.githubusercontent.com/35457235/180058684-ac83040b-0e22-4e28-8fc5-07ed440ac82b.png)
+
+
 ## Requirements
 - Hugo Version 0.96+extended
 
