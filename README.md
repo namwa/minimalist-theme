@@ -54,7 +54,7 @@ theme: minimalist-theme
 themesDir: themes
 ```
 
-Set up the configurations in `config.yaml`. [reference] (https://github.com/namwa/minimalist-theme/blob/master/exampleSite/config.yaml)
+Set up the configurations in `config.yaml`. [reference](https://github.com/namwa/minimalist-theme/blob/master/exampleSite/config.yaml)
 
 
 ## Run Hugo
