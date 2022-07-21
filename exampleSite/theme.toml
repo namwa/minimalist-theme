@@ -1,0 +1,13 @@
+name = "Minimalist Theme"
+license = "MIT"
+licenselink = "https://github.com/namwa/minimalist-theme/blob/master/LICENSE"
+description = "Minimalist Theme is a portfolio and blogging Hugo theme"
+
+homepage = "https://github.com/namwa/minimalist-theme"
+demosite = "https://hugo-minimalist-theme.netlify.app"
+tags = ["blog", "portfolio", "minimal", "clean", "tailwind css"]
+min_version = "0.96.0"
+
+[author]
+  name = "Namwa Sawasdiworn"
+  homepage = "https://www.namwa.dev"
