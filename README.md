@@ -4,9 +4,6 @@ Hugo Minimalist Theme is a portfolio and blogging theme.
 
 Live Demo: https://hugo-minimalist-theme.netlify.app
 
-![hugo-minimalist-theme netlify app_ (1)](https://user-images.githubusercontent.com/35457235/180058684-ac83040b-0e22-4e28-8fc5-07ed440ac82b.png)
-
-
 ## Requirements
 - Hugo Version 0.96+extended
 
@@ -32,15 +29,56 @@ Hugo site will be created in `myNewHugoSite` folder.
 Clone this repo inside your themes folder.
 
 ```
-cd themes
+cd myNewHugoSite
 git clone https://github.com/namwa/minimalist-theme.git
 ```
+
+## Copy example content
+
+Copy all the contents of the `myNewHugoSite/themes/minimalist-theme/exampleSite` folder
+to root folder of your Hugo site, ie `myNewHugoSite/`
+
+To copy the files using terminal. Make sure that you're in the project root, i.e the `myNewHugoSite` folder.
+
+```
+cp -a themes/minimalist-theme/exampleSite/. .
+```
+
+## Update config.yaml
+
+Update your project root config.yaml (you can use config.toml format too).
+You need to update `theme` and `themesDir` values in `myNewHugoSite/config.yaml`
+
+```
+theme: minimalist-theme
+themesDir: themes
+```
+
+Set up the configurations in `config.yaml`. [reference] (https://github.com/namwa/minimalist-theme/blob/master/exampleSite/config.yaml)
+
+
+## Run Hugo
+
+To generate the Hugo site, from the root folder ie `myNewHugoSite`
+```
+hugo
+```
+
+For local development run Hugo's built in local server.
+```
+hugo server
+```
+Your local site will be served at `localhost:1313`.
+
+## Create a blog post
 
 To create a blog post uses a command below. It will create a new blog type of content
 file based on the archetype template. Blog type archetype includes tags and toc (table of content).
 ```
 hugo new blog/my-first-post.md
 ```
+
+## Create a project
 
 To create a new project using a default archetype.
 

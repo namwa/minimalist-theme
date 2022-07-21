@@ -9,6 +9,5 @@ module.exports = {
         'body': ['Lato', 'sans-serif']
       },
     },
-  },
-  plugins: [require('prettier-plugin-tailwindcss')],
+  }
 }
