@@ -9,7 +9,9 @@
       <div class="grid gap-5 md:grid-cols-3">
         {{ range ( where .Site.RegularPages "Type" "projects" ) | first 3 }}
         <a href="{{ .Permalink }}" class="card">
+          {{ if .Params.image }}
           <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="h-48 w-full object-cover">
+          {{- end }}
           <div class="px-6 mb-4">
             <h3 class="font-medium my-4">{{ .Title }}</h3>
             <p>{{ .Params.description }}</p>
