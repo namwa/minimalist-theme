@@ -4,11 +4,11 @@
       <h1 class="title">
         <span class="block bg-clip-text text-transparent bg-gradient-to-r from-purple-400
         to-fuchsia-600">
-          {{ .Site.Data.hero.title | markdownify }}
+          {{ .Site.Params.hero.title | markdownify }}
         </span>
-        <span class="block my-6">{{ .Site.Data.hero.description }}</span>
+        <span class="block my-6">{{ .Site.Params.hero.description }}</span>
       </h1>
-      <p class="my-4 text-gray-600">{{ .Site.Data.hero.body }}</p>
+      <p class="my-4 text-gray-600">{{ .Site.Params.hero.body }}</p>
     </div>
   </div>
 </section>

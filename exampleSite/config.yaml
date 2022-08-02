@@ -35,21 +35,55 @@ params:
   images:
   - author.jpg
 
+  # Hero section
+  hero:
+    title: >
+      # I'm Jane Doe.
+    description: A frontend web developer based in London.
+    name: Jane Doe
+    body: Lorem ipsum dolor sit amet consectetur adipiscing elit donec morbi lectus nisi egestas proin amet rhoncus sceleris lorem feugiat amet hac ornar morbi lectus.
+    image: '/images/author.jpg'
+
   # Services section
   services:
     enable: true
+    topTitle: Services
+    title: Layout design and frontend development
+    service:
+      - content: >
+          ### Web Design
+
+          Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
+          tempor invidunt ut labore et dolore magna aliquyam erat.
+      - content: >
+          ### Web development
+
+          Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
+          tempor invidunt ut labore et dolore magna aliquyam erat.
+      - content: >
+          ### Web management
+
+          Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
+          tempor invidunt ut labore et dolore magna aliquyam erat.
 
   # Projects section
   projects:
     enable: true
+    topTitle: Recent work
+    title: Projects
+    buttonTarget: projects
 
   # Blog section
   blog:
     enable: true
+    topTitle: Recent Posts
+    title: Blog
+    buttonTarget: blog
 
   # CTA section
   cta:
     enable: true
+    content: Let's Build Something Together
 
   # Contact
   contact:
