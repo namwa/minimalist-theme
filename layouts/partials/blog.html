@@ -7,9 +7,9 @@
     </div>
     <div class="my-12">
       <div class="grid gap-5 md:grid-cols-3">
-        {{ range ( where .Site.RegularPages "Type" "blog" ) | first 3 }}
+        {{- range ( where .Site.RegularPages "Type" "blog" ) | first 3 }}
         <a href="{{ .Permalink }}" class="card">
-          {{ if .Params.image }}
+          {{- if .Params.image }}
           <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="h-48 w-full object-cover">
           {{- end }}
           <div class="px-6 mb-4 flex flex-col justify-between">
@@ -18,7 +18,7 @@
             <p class="text-sm text-gray-600">{{ dateFormat "2 Jan 2006" .Date }}</p>
           </div>
         </a>
-        {{ end }}
+        {{- end }}
       </div>
     </div>
   </div>

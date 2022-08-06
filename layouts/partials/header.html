@@ -18,11 +18,11 @@
     </div>
 
     <div class="hidden md:flex space-x-6">
-      {{ $current := . }}
-      {{ range .Site.Menus.main }}
-        {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
-        {{ $active = or $active (eq .Name $current.Title) }}
-        {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
+      {{- $current := . }}
+      {{- range .Site.Menus.main }}
+        {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+        {{- $active = or $active (eq .Name $current.Title) }}
+        {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
         <a href="{{ .URL }}" class="{{ if $active }}active{{ else }}text-gray-600
         hover:text-gray-800 hover:underline{{ end }}">{{ .Name }}</a>
       {{- end }}
@@ -52,11 +52,11 @@
         </div>
         <div class="mt-6">
           <nav class="grid gap-y-2">
-            {{ $current := . }}
-            {{ range .Site.Menus.main }}
-              {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
-              {{ $active = or $active (eq .Name $current.Title) }}
-              {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
+            {{- $current := . }}
+            {{- range .Site.Menus.main }}
+              {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+              {{- $active = or $active (eq .Name $current.Title) }}
+              {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
               <a href="{{ .URL }}" class="{{ if $active }}active{{ else }}text-gray-600
                 hover:text-gray-800 hover:underline{{ end }}">{{ .Name }}</a>
             {{- end }}

@@ -1,11 +1,11 @@
 <footer class="border-t border-gray-400">
   <div class="mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
     <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-      {{ $current := . }}
-      {{ range .Site.Menus.main }}
-        {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
-        {{ $active = or $active (eq .Name $current.Title) }}
-        {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
+      {{- $current := . }}
+      {{- range .Site.Menus.main }}
+        {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+        {{- $active = or $active (eq .Name $current.Title) }}
+        {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
         <div class="px-5 py-2">
           <a href="{{ .URL }}" class="{{ if $active }}active{{ else }}text-gray-600
           hover:text-gray-800 hover:underline{{ end }}">{{ .Name }}</a>
@@ -27,7 +27,7 @@
       </a>
       {{- end }}
 
-      {{ if .Site.Params.instagram }}
+      {{- if .Site.Params.instagram }}
       <a href="{{ .Site.Params.instagram }}" class="text-gray-400 hover:text-gray-500">
         <span class="sr-only">Instagram</span>
         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -36,7 +36,7 @@
       </a>
       {{- end }}
 
-      {{ if .Site.Params.twitter }}
+      {{- if .Site.Params.twitter }}
       <a href="{{ .Site.Params.twitter }}" class="text-gray-400 hover:text-gray-500">
         <span class="sr-only">Twitter</span>
         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -45,7 +45,7 @@
       </a>
       {{- end}}
 
-      {{ if .Site.Params.github }}
+      {{- if .Site.Params.github }}
       <a href="{{ .Site.Params.github }}" class="text-gray-400 hover:text-gray-500">
         <span class="sr-only">GitHub</span>
         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -54,7 +54,7 @@
       </a>
       {{- end }}
 
-      {{ if .Site.Params.dribbble }}
+      {{- if .Site.Params.dribbble }}
       <a href="{{ .Site.Params.dribbble }}" class="text-gray-400 hover:text-gray-500">
         <span class="sr-only">Dribbble</span>
         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
