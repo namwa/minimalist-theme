@@ -3,8 +3,10 @@ languageCode: en-us
 title: Jane Doe
 theme: minimalist-theme
 themesDir: ../..
+
 paginate: 3
 googleAnalytics: G-MEASUREMENT_ID
+favicon: "/favicon.png"
 
 menu:
   main:
