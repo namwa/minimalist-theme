@@ -55,16 +55,16 @@
     @apply text-lg py-4;
   }
   .content p {
-    @apply py-3 text-base;
+    @apply py-3 text-lg;
   }
   .content a {
     @apply underline decoration-fuchsia-600 text-fuchsia-600;
   }
   .content strong {
-    @apply font-semibold
+    @apply font-bold;
   }
   .content ul, ol {
-    @apply my-2
+    @apply my-2;
   }
   .content ol > li {
     @apply list-decimal;
