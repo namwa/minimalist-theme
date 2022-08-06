@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="font-body scroll-smooth">
-  {{- partial "head.html" . -}}
+  {{- partial "head.html" . }}
   <body class="h-screen flex flex-col">
     {{- partial "header.html" . -}}
     <main class="max-w-5xl mx-auto mb-auto">
@@ -10,5 +10,9 @@
 
     {{ $scripts := resources.Get "js/index.js" -}}
     <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
+
+    {{ if .Site.Params.gtm_id }}
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{ .Site.Params.gtm_id }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    {{- end }}
   </body>
 </html>

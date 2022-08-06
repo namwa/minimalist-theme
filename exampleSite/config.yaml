@@ -6,7 +6,7 @@ themesDir: ../..
 
 paginate: 3
 googleAnalytics: G-MEASUREMENT_ID
-favicon: "/favicon.png"
+favicon: /favicon.png
 
 menu:
   main:
@@ -37,6 +37,8 @@ params:
   images:
   - author.jpg
 
+  gtm_id: GTM-xxxxxxx
+
   # Hero section
   hero:
     title: >
@@ -44,7 +46,7 @@ params:
     description: A frontend web developer based in London.
     name: Jane Doe
     body: Lorem ipsum dolor sit amet consectetur adipiscing elit donec morbi lectus nisi egestas proin amet rhoncus sceleris lorem feugiat amet hac ornar morbi lectus.
-    image: '/images/author.jpg'
+    image: /images/author.jpg
 
   # Services section
   services:
