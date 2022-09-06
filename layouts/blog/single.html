@@ -25,20 +25,22 @@
         href="{{ .Site.BaseURL}}{{ .Section }}"
         class="btn btn-ghost my-10 inline-block"
       >
-        <svg
-          class="inline h-3 w-3"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M10 19l-7-7m0 0l7-7m-7 7h18"
-          ></path>
-        </svg>
-        <span class="capitalize">Back to {{ .Section }}</span>
+        <div class="flex items-center">
+          <svg
+            class="inline-block h-3 w-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            ></path>
+          </svg>
+          <p class="capitalize">Back to {{ .Section }}</p>
+        </div>
       </a>
     </section>
 
