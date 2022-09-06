@@ -1,4 +1,4 @@
-baseURL: /
+baseURL: https://example.com
 languageCode: en-us
 title: Jane Doe
 theme: minimalist-theme
@@ -35,7 +35,7 @@ params:
   title: Jane's Doe
   description: This is Jane's Doe portfolio
   images:
-  - author.jpg
+    - author.jpg
 
   gtm_id: GTM-xxxxxxx
 
