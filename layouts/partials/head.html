@@ -1,8 +1,17 @@
 <head>
-  {{/* GTM */}}
-  {{ if .Site.Params.gtm }}
-    {{- partial "gtm.html" . }}
-  {{- end }}
+  {{ with site.Params.googleAnalytics }}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ . }}');
+  </script>
+  {{ end }}
+
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +24,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   {{/* Internal templates */}}
-  {{/* {{ template "_internal/google_analytics_async.html" . }} */}}
   {{ template "_internal/twitter_cards.html" . }}
 
   <link rel="stylesheet" href="/css/output.css">

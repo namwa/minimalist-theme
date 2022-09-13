@@ -5,7 +5,6 @@ theme: minimalist-theme
 themesDir: ../..
 
 paginate: 3
-googleAnalytics: G-MEASUREMENT_ID
 favicon: /favicon.png
 
 menu:
@@ -38,6 +37,7 @@ params:
     - author.jpg
 
   gtm_id: GTM-xxxxxxx
+  googleAnalytics: G-MEASUREMENT_ID
 
   # Hero section
   hero:
