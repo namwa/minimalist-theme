@@ -1,13 +1,16 @@
 <head>
-  {{ with site.Params.googleAnalytics }}
+  {{ if .Site.Params.googleAnalytics }}
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+    var dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      PageTitle: {{ .Title }}
+    });
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', '{{ . }}');
+    gtag('config', '{{ .Site.Params.googleAnalytics }}');
   </script>
   {{ end }}
 
