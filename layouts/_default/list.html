@@ -4,12 +4,12 @@
   <div class="grid md:grid-cols-10">
     <div class="md:col-span-7">
       {{ range .Pages }}
-      <a href="{{ .Permalink }}" class="block py-6">
-          <p class="text-xs text-gray-600">{{ dateFormat "2 Jan 2006" .Date }}</p>
+      <a href="{{ .Permalink }}" class="block py-6 border-b border-gray-200">
+          <p class="text-base text-gray-600">{{ dateFormat "2 Jan 2006" .Date }}</p>
           <div class="hover:text-fuchsia-600">
             <h3 class="font-medium text-2xl my-2">{{ .Title }}</h3>
-            <p class="text-gray-600">{{ .Params.description }}</p>
-            <p class="my-2.5 text-sm">Read more</p>
+            <p class="text-gray-600 text-lg">{{ .Params.description }}</p>
+            <p class="my-2.5 text-base">Read more</p>
           </div>
         </a>
       {{ end }}
