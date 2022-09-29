@@ -3,32 +3,37 @@
 @tailwind utilities;
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: Merriweather, serif;
   }
 }
 
 @layer components {
   .title {
-    @apply font-[700] text-4xl lg:text-6xl text-gray-800;
+    @apply text-2xl font-[700] text-gray-800 lg:text-4xl;
   }
   .btn {
-    @apply px-4 py-2 border border-transparent text-sm leading-4 font-semibold rounded-md shadow-sm;
+    @apply rounded-md border border-transparent px-4 py-2 text-sm font-semibold leading-4 shadow-sm;
   }
   .btn-fullwidth {
     @apply block w-full text-center;
   }
   .btn-primary {
-    @apply text-white bg-fuchsia-600 hover:bg-fuchsia-700;
+    @apply bg-fuchsia-600 text-white hover:bg-fuchsia-700;
   }
   .btn-ghost {
-    @apply text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-400;
+    @apply border border-gray-400 bg-gray-100 text-gray-700 hover:bg-gray-200;
   }
   .active {
-    @apply text-fuchsia-600 font-semibold hover:underline;
+    @apply font-semibold text-fuchsia-600 hover:underline;
   }
   .card {
-    @apply overflow-hidden rounded-md shadow-sm bg-gray-50 border border-gray-400;
+    @apply overflow-hidden rounded-md border border-gray-400 bg-gray-50 shadow-sm;
   }
   .card-inner-text p {
     @apply my-6;
@@ -37,46 +42,47 @@
     @apply text-2xl;
   }
   .content {
-    @apply max-w-3xl mx-auto;
+    @apply mx-auto max-w-3xl;
   }
   .content h1 {
-    @apply text-4xl py-4;
+    @apply py-4 text-4xl;
   }
   .content h2 {
-    @apply text-3xl py-4;
+    @apply py-4 text-3xl;
   }
   .content h3 {
-    @apply text-2xl py-4;
+    @apply py-4 text-2xl;
   }
   .content h4 {
-    @apply text-xl py-4;
+    @apply py-4 text-xl;
   }
   .content h5 {
-    @apply text-lg py-4;
+    @apply py-4 text-lg;
   }
   .content p {
     @apply py-3 text-lg;
   }
   .content a {
-    @apply underline decoration-fuchsia-600 text-fuchsia-600;
+    @apply text-fuchsia-600 underline decoration-fuchsia-600;
   }
   .content strong {
     @apply font-bold;
   }
-  .content ul, ol {
+  .content ul,
+  ol {
     @apply my-2;
   }
   .content ol > li {
     @apply list-decimal;
   }
   .content li {
-    @apply list-disc ml-4;
+    @apply ml-4 list-disc;
   }
   .content .highlight {
     @apply py-4;
   }
   .content .highlight pre {
-    @apply font-mono py-4 px-4;
+    @apply py-4 px-4 font-mono;
   }
   .content blockquote {
     @apply ml-4 border-l-4 border-fuchsia-600;
@@ -100,16 +106,18 @@
     @apply whitespace-nowrap py-3 pl-4 pr-4 text-sm font-medium text-gray-900;
   }
   .tags {
-    @apply px-2.5 py-2 mx-1 my-1 inline-block border border-gray-300 text-sm rounded-md bg-gray-50
+    @apply mx-1 my-1 inline-block rounded-md border border-gray-300 bg-gray-50 px-2.5 py-2 text-sm
       text-gray-500 hover:bg-gray-100 hover:text-fuchsia-600;
   }
   .toc {
-    @apply fixed px-3 py-4 bg-gray-50 text-sm text-gray-600;
+    @apply fixed bg-gray-50 px-3 py-4 text-sm text-gray-600;
   }
-  .toc ul, .tocl ol {
-    @apply pl-6 mb-4;
+  .toc ul,
+  .tocl ol {
+    @apply mb-4 pl-6;
   }
-  .toc ol li a, .toc ul li a {
+  .toc ol li a,
+  .toc ul li a {
     @apply hover:text-fuchsia-600;
   }
 }
