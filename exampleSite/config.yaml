@@ -34,7 +34,9 @@ params:
   title: Jane's Doe
   description: This is Jane's Doe portfolio
   images:
-    - author.jpg
+    - /images/author.jpg
+  twitter: https://twitter.com
+
 
   gtm_id: GTM-xxxxxxx
   googleAnalytics: G-MEASUREMENT_ID
