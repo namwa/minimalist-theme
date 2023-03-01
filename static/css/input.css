@@ -15,7 +15,7 @@
 
 @layer components {
   .title {
-    @apply text-2xl font-[700] text-gray-800 lg:text-4xl;
+    @apply text-2xl font-[700] text-gray-800 lg:text-3xl;
   }
   .btn {
     @apply rounded-md border border-transparent px-4 py-2 text-sm font-semibold leading-4 shadow-sm;
