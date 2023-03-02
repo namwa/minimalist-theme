@@ -6,17 +6,22 @@
       {{ range .Pages }}
       <a href="{{ .Permalink }}" class="block py-6 border-b border-gray-200 md:max-w-lg">
         <p class="text-base text-gray-600">{{ dateFormat "2 Jan 2006" .Date }}</p>
-        <div class="hover:text-fuchsia-600">
-          <h3 class="font-medium text-2xl my-2">{{ .Title }}</h3>
+        <div class="group hover:text-fuchsia-600">
+          <h3 class="group-hover:text-fuchsia-600 text-gray-700 text-2xl my-2">{{ .Title }}</h3>
           <p class="text-gray-600 text-lg">{{ .Params.description }}</p>
-          <p class="my-2.5 text-base">Read more</p>
+          <p class="my-2.5 text-base">
+            Read more
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 hidden group-hover:inline-block ">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+            </svg>
+          </p>
         </div>
       </a>
       {{ end }}
     </div>
     {{ if .Site.Taxonomies.tags }}
     <div class="md:col-span-3">
-      <h2 class="my-6 text-xl md:text-2xl font-semibold tracking-wider">Categories</h2>
+      <h2 class="my-6 text-xl text-gray-700">Categories</h2>
         {{ range .Site.Taxonomies.tags }}
         <a href="{{ .Page.Permalink }}" class="tags">{{ .Page.Title }}</a>
         {{ end }}

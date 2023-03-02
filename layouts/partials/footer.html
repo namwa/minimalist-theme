@@ -7,12 +7,11 @@
         {{- $active = or $active (eq .Name $current.Title) }}
         {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
         <div class="px-5 py-2">
-          <a href="{{ .URL }}" class="{{ if $active }}active{{ else }}text-gray-600
-          hover:text-gray-800 hover:underline{{ end }}">{{ .Name }}</a>
+          <a href="{{ .URL }}" class="{{ if $active }}active{{ else }}text-gray-600 font-semibold text-lg hover:text-gray-800{{ end }}">{{ .Name }}</a>
         </div>
       {{- end }}
       <div class="px-5 py-2">
-        <a href="{{ "contact" | absURL }}" class="text-gray-600 hover:text-gray-800 hover:underline">
+        <a href="{{ "contact" | absURL }}" class="{{ if eq .Title "Contact" }}active{{else}} text-gray-600 font-semibold text-lg hover:text-gray-800{{end}}">
           Contact
         </a>
       </div>
