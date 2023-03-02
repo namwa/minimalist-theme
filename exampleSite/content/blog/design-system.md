@@ -6,7 +6,7 @@ draft: false
 image: "images/development.jpg"
 tags:
   - Design
-toc:
+toc: false
 ---
 # Fusce venenatis arcu auctor
 

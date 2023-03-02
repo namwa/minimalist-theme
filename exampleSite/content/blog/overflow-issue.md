@@ -7,7 +7,7 @@ image: "/images/design.jpg"
 author: "Jane Doe"
 tags:
   - CSS
-toc:
+toc: false
 ---
 # Overflow Issues In CSS
 
