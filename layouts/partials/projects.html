@@ -8,7 +8,7 @@
     <div class="my-12">
       <div class="grid gap-5 md:grid-cols-3">
         {{- range ( where .Site.RegularPages "Type" "projects" ) | first 3 }}
-        <a href="{{ .Permalink }}" class="card">
+        <a href="{{ .Permalink }}" class="card hover:bg-gray-100">
           {{- if .Params.image }}
           <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="h-48 w-full object-cover">
           {{- end }}
