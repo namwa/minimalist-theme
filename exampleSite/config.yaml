@@ -94,7 +94,7 @@ params:
   # Contact
   contact:
     enable: true
-    content: Feel free to reach out if you're looking for a developer, have a question, or just want to connect
+    content: Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
     email: janedoe@email.com
     btnName: Mail me
 
