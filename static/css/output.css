@@ -428,6 +428,14 @@ h1,
   font-family: Merriweather Sans, sans-serif;
 }
 
+::-moz-selection {
+  background: #f0abfc;
+}
+
+::selection {
+  background: #f0abfc;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -764,6 +772,8 @@ h1,
 
 .content code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --tw-text-opacity: 1;
+  color: rgb(168 85 247 / var(--tw-text-opacity));
 }
 
 .tags {

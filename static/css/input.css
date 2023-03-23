@@ -11,6 +11,9 @@
   h6 {
     font-family: Merriweather Sans, sans-serif;
   }
+  ::selection {
+    background: #f0abfc;
+  }
 }
 
 @layer components {
@@ -106,7 +109,7 @@
     @apply whitespace-nowrap py-3 pl-4 pr-4 text-sm font-medium text-gray-900;
   }
   .content code {
-    @apply font-mono;
+    @apply font-mono text-purple-500;
   }
   .tags {
     @apply mx-1 my-1 inline-block rounded-md border border-gray-300 bg-gray-50 px-2.5 py-2 text-sm
