@@ -66,13 +66,13 @@
     @apply py-3 text-lg;
   }
   .content a {
-    @apply text-fuchsia-600 underline decoration-fuchsia-600;
+    @apply text-fuchsia-600 underline decoration-fuchsia-600 hover:text-purple-500
+    hover:decoration-purple-500;
   }
   .content strong {
     @apply font-bold;
   }
-  .content ul,
-  ol {
+  .content ul, ol {
     @apply my-2;
   }
   .content ol > li {

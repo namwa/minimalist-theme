@@ -694,12 +694,17 @@ h1,
   text-decoration-color: #c026d3;
 }
 
+.content a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(168 85 247 / var(--tw-text-opacity));
+  text-decoration-color: #a855f7;
+}
+
 .content strong {
   font-weight: 700;
 }
 
-.content ul,
-  ol {
+.content ul, ol {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -957,10 +962,6 @@ h1,
 
 .mr-2 {
   margin-right: 0.5rem;
-}
-
-.mt-12 {
-  margin-top: 3rem;
 }
 
 .mt-6 {
@@ -1534,19 +1535,14 @@ h1,
     justify-content: space-between;
   }
 
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .md\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .md\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .md\:pb-10 {
