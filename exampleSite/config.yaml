@@ -3,6 +3,8 @@ languageCode: en-us
 title: Jane Doe
 theme: minimalist-theme
 themesDir: ../..
+disableHugoGeneratorInject: true
+enableRobotsTXT: true
 
 paginate: 3
 favicon: /favicon.png
