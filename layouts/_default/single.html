@@ -1,12 +1,12 @@
 {{- define "main" }}
-<div class="py-6 px-4 md:py-20">
-  <h1 class="title pb-8 text-center md:pb-10">{{ .Title }}</h1>
+<div class="py-6 px-4 md:py-12">
+  <h1 class="title leading-10 text-center pb-4 md:pb-10">{{ .Title }}</h1>
   {{ if .Params.image }}
   <div class="mx-auto max-w-3xl">
     <img src="{{ .Params.image | relURL }}" class="rounded-md object-cover" />
   </div>
   {{ end }}
-  <div class="content my-10">{{ .Content }}</div>
+  <div class="content my-4 lg:my-10">{{ .Content }}</div>
   <div class="mx-auto max-w-3xl">
     <a
       href="{{ .Site.BaseURL}}{{ .Section }}"
