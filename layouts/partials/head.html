@@ -17,6 +17,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- if .IsHome }}
+    <meta name="description" content="{{ site.Params.Description }}">
+  {{- else}}
+    <meta name="description" content="{{ .Params.Description }}">
+  {{- end -}}
 
   <link rel="icon" href={{ .Site.Params.favicon | default "/favicon.png" }} type="image/gif">
   <link rel="canonical" href="{{ .Permalink }}" />
@@ -30,7 +35,13 @@
   {{ template "_internal/twitter_cards.html" . }}
 
   <link rel="stylesheet" href="/css/output.css">
-  {{ $title := print .Site.Title " | " .Title }}
-  {{ if .IsHome }}{{ $title := .Site.Title }}{{- end }}
-  <title>{{ $title }}</title>
+  <title>
+    {{- if .IsHome -}}
+      Home | {{ .Site.Title }}
+    {{- else if .Page.Title -}}
+      {{ .Page.Title }} | {{ .Site.Title }}
+    {{- else -}}
+      {{ .Site.Title }}
+    {{- end -}}
+  </title>
 </head>
