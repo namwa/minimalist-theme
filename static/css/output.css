@@ -419,13 +419,39 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: Merriweather Sans;
+
+  font-style: normal;
+
+  font-weight: 400 700;
+
+  src: url('../fonts/merriweather-sans-regular.woff2') format('woff2'),
+        url('../fonts/merriweather-sans-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: Inter, sans-serif;
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/Inter-Regular.woff') format('woff');
+}
+
 h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-  font-family: Merriweather Sans, sans-serif;
+  font-family: Merriweather, sans-serif;
+}
+
+span, a, p,  {
+  font-family: Inter, sans-serif;
 }
 
 ::-moz-selection {
@@ -533,7 +559,7 @@ h1,
 .title {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-weight: 700;
+  font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
@@ -554,7 +580,6 @@ h1,
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1.125rem;
-  font-weight: 600;
   line-height: 1rem;
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -597,7 +622,6 @@ h1,
 .active {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(192 38 211 / var(--tw-text-opacity));
 }
@@ -625,6 +649,8 @@ h1,
 .card-inner-text p {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .card-inner-text h3 {

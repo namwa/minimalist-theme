@@ -3,7 +3,7 @@
     border-gray-300 py-2.5" aria-label="Main Navigation">
     <div class="flex items-center flex-1">
       <div class="flex items-center justify-between w-full md:w-auto">
-        <a href="{{ .Site.BaseURL }}" class="font-semibold tracking-tighter text-lg md:text-xl
+        <a href="{{ .Site.BaseURL }}" class="tracking-tighter text-lg md:text-xl
          text-gray-600 hover:text-gray-900">
           {{ .Site.Title }}
         </a>
@@ -24,7 +24,7 @@
         {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
         {{- $active = or $active (eq .Name $current.Title) }}
         {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
-        <a href="{{ .URL }}" class="{{ if $active }}active{{ else }}text-gray-600 font-semibold text-lg hover:text-gray-800{{ end }}">{{ .Name }}</a>
+        <a href="{{ .URL }}" class="{{ if $active }}active{{ else }}text-gray-600 text-lg hover:text-gray-800{{ end }}">{{ .Name }}</a>
       {{- end }}
     </div>
     <a href="{{ "contact" | absURL }}" class="hidden md:inline-flex items-center mx-6 btn btn-primary">

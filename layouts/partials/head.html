@@ -26,10 +26,8 @@
   <link rel="icon" href={{ .Site.Params.favicon | default "/favicon.png" }} type="image/gif">
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  {{/* Fonts */}}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
   {{/* Internal templates */}}
   {{ template "_internal/twitter_cards.html" . }}
