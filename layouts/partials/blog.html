@@ -3,7 +3,7 @@
   <div class="py-6 px-4 md:py-20">
     <div class="text-center">
       <p class="text-gray-600 mb-2.5 text-lg">{{ .Site.Params.blog.title }}</p>
-      <h2 class="text-gray-800 font-semibold text-xl md:text-3xl">{{ .Site.Params.blog.topTitle }}</h2>
+      <h2 class="text-gray-800 font-semibold font-display text-xl md:text-3xl">{{ .Site.Params.blog.topTitle }}</h2>
     </div>
     <div class="my-12">
       <div class="grid gap-5 md:grid-cols-3">
@@ -13,7 +13,7 @@
           <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="h-48 w-full object-cover">
           {{- end }}
           <div class="px-6 mb-4 flex flex-col justify-between">
-            <h3 class="font-semibold my-4 text-lg text-gray-700">{{ .Title }}</h3>
+            <h3 class="font-semibold font-display my-4 text-lg text-gray-700">{{ .Title }}</h3>
             <p>{{ .Params.description | truncate 30 }}</p>
             <p class="text-sm text-gray-600">{{ dateFormat "2 Jan 2006" .Date }}</p>
           </div>

@@ -2,11 +2,13 @@
   <div class="py-6 px-4 md:py-20 border-b border-gray-200">
     <div class="max-w-xl">
       <h1 class="title">
+        {{ if .Site.Params.hero.title }}
         <span class="block bg-clip-text text-transparent bg-gradient-to-r from-purple-400
         to-fuchsia-600">
-          {{/* {{ .Site.Params.hero.title | markdownify }} */}}
+          {{ .Site.Params.hero.title | markdownify }}
         </span>
-        <span class="block my-6">{{ .Site.Params.hero.description }}</span>
+        {{- end -}}
+        {{ .Site.Params.hero.description }}
       </h1>
       <p class="my-4 text-gray-600 text-base md:text-xl">{{ .Site.Params.hero.body }}</p>
     </div>

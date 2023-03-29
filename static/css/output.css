@@ -424,10 +424,21 @@ video {
 
   font-style: normal;
 
-  font-weight: 400 700;
+  font-weight: 400;
 
-  src: url('../fonts/merriweather-sans-regular.woff2') format('woff2'),
-        url('../fonts/merriweather-sans-regular.woff') format('woff');
+  src: url('../fonts/merriweather-sans-500.woff2') format('woff2'),
+        url('../fonts/merriweather-sans-500.woff') format('woff');
+}
+
+@font-face {
+  font-family: Merriweather Sans;
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  src: url('../fonts/merriweather-sans-600.woff2') format('woff2'),
+        url('../fonts/merriweather-sans-600.woff') format('woff');
 }
 
 @font-face {
@@ -450,7 +461,7 @@ h1,
   font-family: Merriweather, sans-serif;
 }
 
-span, a, p,  {
+span, a, p  {
   font-family: Inter, sans-serif;
 }
 
@@ -557,6 +568,7 @@ span, a, p,  {
 }
 
 .title {
+  font-family: Merriweather Sans, sans-serif;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
@@ -654,14 +666,15 @@ span, a, p,  {
 }
 
 .card-inner-text h3 {
+  font-family: Merriweather Sans, sans-serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
 @media (min-width: 768px) {
   .card-inner-text h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1318,6 +1331,10 @@ span, a, p,  {
   font-family: Inter, sans-serif;
 }
 
+.font-display {
+  font-family: Merriweather Sans, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1349,10 +1366,6 @@ span, a, p,  {
 
 .font-extrabold {
   font-weight: 800;
-}
-
-.font-medium {
-  font-weight: 500;
 }
 
 .font-semibold {
