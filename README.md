@@ -26,10 +26,11 @@ Hugo site will be created in `myNewHugoSite` folder.
 
 ## Install theme
 
-Clone this repo inside your themes folder.
+Clone this repo inside your `themes` folder.
 
 ```
-cd myNewHugoSite
+cd myNewHugoSite/themes
+
 git clone https://github.com/namwa/minimalist-theme.git
 ```
 
