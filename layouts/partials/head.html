@@ -33,7 +33,14 @@
   {{/* Internal templates */}}
   {{ template "_internal/twitter_cards.html" . }}
 
-  <link rel="stylesheet" href="/css/output.css">
+  {{ $styles := resources.Get "css/output.css" | postCSS  }}
+  {{ if .Site.IsServer}}
+  <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
+  {{ else }}
+  {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
+  {{ end }}
+
   <title>
     {{- if .IsHome -}}
       Home | {{ .Site.Title }}

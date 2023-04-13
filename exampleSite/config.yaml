@@ -31,6 +31,8 @@ menu:
 markup:
   tableOfContents:
     endLevel: 3
+  highlight:
+    lineNos: true
 
 params:
   title: Jane's Doe
