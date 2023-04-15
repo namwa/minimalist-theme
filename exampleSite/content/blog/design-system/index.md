@@ -21,7 +21,4 @@ laoreet eget eu mi.
 
 ## An image below is generated from picture shortcode
 
-<!-- {{< picture path="images/development.jpg" alt="My design image" >}} -->
-
-## From markdown render
-![Development Image](/images/development.jpg "Title")
+{{< picture path="images/development.jpg" alt="My design image" >}}
