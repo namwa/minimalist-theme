@@ -3,7 +3,6 @@ title: "Overflow Issues In CSS"
 description: "In cursus erat a pellentesque convalli"
 date: 2022-07-02T22:16:43+01:00
 draft: false
-image: "/images/design.jpg"
 author: "Jane Doe"
 tags:
   - CSS

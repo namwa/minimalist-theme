@@ -3,7 +3,6 @@ title: "Markdown syntax"
 description: "A sample of basic Markdown syntax that can be used in Hugo content"
 date: 2022-07-02T22:16:29+01:00
 draft: false
-image: "/images/design.jpg"
 author: "Jane Doe"
 tags:
   - Markdown syntax
