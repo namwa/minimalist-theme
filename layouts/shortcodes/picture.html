@@ -37,10 +37,8 @@
       {{- $fitOptions = printf "%vx%v webp" $width $height -}}
       {{- $w = $i.Fit $fitOptions -}}
     {{- end -}}
-
     <picture>
       <source srcset="{{ $w.RelPermalink }}" type="image/webp">
-      <source srcset="{{ $j.RelPermalink }}" type="image/jpeg">
       <img src="{{ $j.RelPermalink }}" alt="{{ $alt }}" width="{{ $j.Width }}" height="{{ $j.Height }}">
     </picture>
   {{- else -}}
