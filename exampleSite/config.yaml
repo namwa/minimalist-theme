@@ -33,6 +33,10 @@ markup:
     endLevel: 3
   highlight:
     lineNos: true
+  #Removing IDs from headings
+  goldmark:
+    parser:
+      autoHeadingID: false
 
 params:
   title: Jane's Doe
@@ -105,7 +109,6 @@ params:
   # Social networks on footer
   github: https://github.com
   linkedin: https://linkedin.com
-  twitter: https://twitter.com
   instagram: https://instagram.com
   facebook: https://facebook.com
   dribbble: https://dribbble.com

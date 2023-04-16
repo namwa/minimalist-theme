@@ -10,14 +10,7 @@
         <span>{{ .Date.Format "2 Jan 2006" }}</span>
       </div>
       {{- end }}
-      {{ if .Params.image }}
-      <div class="mx-auto max-w-3xl">
-        <img
-          src="{{ .Params.image | relURL }}"
-          class="rounded-md object-cover"
-        />
-      </div>
-      {{ end }}
+      {{ partial "webp_image.html" . }}
       <div class="content my-4 lg:my-10">{{ .Content }}</div>
       <a
         href="{{ .Site.BaseURL}}{{ .Section }}"

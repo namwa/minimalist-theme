@@ -1,0 +1,10 @@
+{{- $image := .Resources.GetMatch "cover.*" -}}
+{{ if $image }}
+{{ $webp := $image.Resize (printf "%dx%d webp picture" $image.Width $image.Height) -}}
+<picture>
+  <source srcset="{{ $webp.RelPermalink }}" type="image/webp" >
+  <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}"
+    height="{{ $image.Height }}" loading="lazy" class="object-cover rounded-md w-full"
+  >
+</picture>
+{{ end -}}

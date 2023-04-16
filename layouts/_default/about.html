@@ -4,7 +4,7 @@
   <div class="grid md:grid-cols-2 justify-items-center items-center">
     {{ if .Params.image }}
     <div class="max-w-3xl mx-auto h-full md:w-2/3 mt-8 md:mt-0">
-      <img src="{{ .Params.image | relURL }}" class="object-cover rounded-md">
+      {{ partialCached "webp_image.html" . }}
     </div>
     {{ end }}
     <div>
