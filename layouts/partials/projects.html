@@ -8,15 +8,7 @@
     <div class="my-12">
       <div class="grid gap-5 md:grid-cols-3">
         {{- range ( where .Site.RegularPages "Type" "projects" ) | first 3 }}
-        <a href="{{ .Permalink }}" class="card hover:bg-gray-100">
-          {{- if .Params.image }}
-          <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="h-48 w-full object-cover">
-          {{- end }}
-          <div class="px-6 mb-4">
-            <h3 class="font-semibold my-4 text-lg text-gray-700 font-display">{{ .Title }}</h3>
-            <p>{{ .Params.description }}</p>
-          </div>
-        </a>
+        {{ partialCached "card.html" . .Permalink }}
         {{- end }}
       </div>
     </div>
