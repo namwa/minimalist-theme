@@ -10,16 +10,7 @@
         <span>{{ .Date.Format "2 Jan 2006" }}</span>
       </div>
       {{- end }}
-      {{- $image := .Resources.GetMatch "cover.*" -}}
-      {{ if $image }}
-      {{ $webp := $image.Resize (printf "%dx%d webp picture" $image.Width $image.Height) -}}
-      <picture>
-        <source srcset="{{ $webp.RelPermalink }}" type="image/webp" >
-        <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}"
-          height="{{ $image.Height }}" loading="lazy" class="object-cover rounded-md max-w-full"
-        >
-      </picture>
-      {{ end -}}
+      {{ partialCached "webp_image.html" . }}
       <div class="content my-4 lg:my-10">{{ .Content }}</div>
       <a
         href="{{ .Site.BaseURL}}{{ .Section }}"

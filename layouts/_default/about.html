@@ -4,14 +4,7 @@
   <div class="grid md:grid-cols-2 justify-items-center items-center">
     {{ if .Params.image }}
     <div class="max-w-3xl mx-auto h-full md:w-2/3 mt-8 md:mt-0">
-      {{- $image := .Resources.GetMatch "cover.*"  }}
-      {{ $webp := $image.Resize (printf "%dx%d webp picture" $image.Width $image.Height) -}}
-      <picture>
-        <source srcset="{{ $webp.RelPermalink }}" type="image/webp" >
-        <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}"
-          height="{{ $image.Height }}" loading="lazy" class="object-cover rounded-md max-w-full"
-        >
-      </picture>
+      {{ partialCached "webp_image.html" . }}
     </div>
     {{ end }}
     <div>
