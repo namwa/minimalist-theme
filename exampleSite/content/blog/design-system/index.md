@@ -21,4 +21,4 @@ laoreet eget eu mi.
 
 ## An image below is generated from picture shortcode
 
-{{< picture path="images/development.jpg" alt="My design image" >}}
+{{< picture path="/images/development.jpg" alt="My design image" >}}
