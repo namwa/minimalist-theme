@@ -10,7 +10,7 @@
         <span>{{ .Date.Format "2 Jan 2006" }}</span>
       </div>
       {{- end }}
-      {{ partialCached "webp_image.html" . }}
+      {{ partial "webp_image.html" . }}
       <div class="content my-4 lg:my-10">{{ .Content }}</div>
       <a
         href="{{ .Site.BaseURL}}{{ .Section }}"

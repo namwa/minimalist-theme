@@ -3,7 +3,6 @@ title: "Design Work"
 description: "Sed at sodales risus. Nunc lobortis facilisis felis"
 date: 2022-07-08T22:38:36+01:00
 draft: false
-image: "/images/prototype.jpg"
 ---
 # Design work
 

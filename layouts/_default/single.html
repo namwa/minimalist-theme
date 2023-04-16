@@ -1,16 +1,7 @@
 {{- define "main" }}
 <div class="py-6 px-4 md:py-12">
   <h1 class="title leading-10 text-center pb-4 md:pb-10">{{ .Title }}</h1>
-  {{- with .Params.image }}
-  {{- $image := resources.Get . -}}
-  {{ $webp := $image.Resize (printf "%dx%d webp picture" $image.Width $image.Height) }}
-  <picture>
-    <source srcset="{{ $webp.RelPermalink }}" type="image/webp" >
-    <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}"
-      height="{{ $image.Height }}" loading="lazy" class="object-cover rounded-md max-w-full"
-    >
-  </picture>
-  {{ end }}
+  {{ partial "webp_image.html" . }}
   <div class="content my-4 lg:my-10">{{ .Content }}</div>
   <div class="mx-auto max-w-3xl">
     <a
