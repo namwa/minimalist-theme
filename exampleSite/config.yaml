@@ -5,6 +5,7 @@ theme: minimalist-theme
 themesDir: ../..
 disableHugoGeneratorInject: true
 enableRobotsTXT: true
+summaryLength: 7
 
 paginate: 6
 favicon: /favicon.png
