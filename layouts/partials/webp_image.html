@@ -1,10 +1,14 @@
+{{ $br := .Scratch.Get "br" | default "rounded-md" }}
+
 {{- $image := .Resources.GetMatch "cover.*" -}}
 {{ if $image }}
 {{ $webp := $image.Resize (printf "%dx%d webp picture" $image.Width $image.Height) -}}
-<picture class="object-cover rounded-md h-48 w-full">
+<picture class="aspect-[16/9] w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
   <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
   <img src="{{ $image.RelPermalink }}"
-     loading="lazy" class="object-cover rounded-md h-48 w-full"
+    loading="lazy"
+    alt="{{ .Title }}"
+    class="aspect-[16/9] w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2] {{$br}} "
   >
 </picture>
 {{ end -}}

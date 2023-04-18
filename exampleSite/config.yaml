@@ -6,7 +6,7 @@ themesDir: ../..
 disableHugoGeneratorInject: true
 enableRobotsTXT: true
 
-paginate: 3
+paginate: 6
 favicon: /favicon.png
 
 menu:

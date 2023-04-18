@@ -1,4 +1,5 @@
 <a href="{{ .Permalink }}" class="card hover:bg-gray-100">
+  {{ .Scratch.Set "br" "none" }}
   {{ partial "webp_image.html" . }}
   <div class="px-6 mb-4 flex flex-col justify-between">
     <h3 class="font-semibold font-display my-4 text-lg text-gray-700">{{ .Title }}</h3>
