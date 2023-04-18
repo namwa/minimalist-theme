@@ -86,3 +86,7 @@ To create a new project using a default archetype.
 ```
 hugo new projects/my-project.md
 ```
+
+## Config summary length
+
+Use summaryLength variable in config.yaml to control number of words in the summary.
