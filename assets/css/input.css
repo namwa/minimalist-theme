@@ -61,7 +61,7 @@
     @apply border border-gray-400 bg-gray-100 text-gray-700 hover:bg-gray-200;
   }
   .active {
-    @apply text-sm md:text-lg text-fuchsia-600;
+    @apply text-base md:text-lg text-fuchsia-600;
   }
   .card {
     @apply overflow-hidden rounded-md border border-gray-400 bg-gray-50 shadow-sm;

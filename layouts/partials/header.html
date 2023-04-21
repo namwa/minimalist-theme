@@ -36,7 +36,7 @@
     <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
       <div class="pt-5 pb-6 px-5">
         <div class="flex items-center justify-between">
-          <div class="font-bold text-primary-900">
+          <div class="font-semibold text-gray-700">
             <a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a>
           </div>
           <div class="-mr-2">
@@ -51,14 +51,14 @@
           </div>
         </div>
         <div class="mt-6">
-          <nav class="grid gap-y-2">
+          <nav class="grid gap-y-6">
             {{- $current := . }}
             {{- range .Site.Menus.main }}
               {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
               {{- $active = or $active (eq .Name $current.Title) }}
               {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
               <a href="{{ .URL }}" class="{{ if $active }}active{{ else }}text-gray-600
-                text-sm md:text-lg hover:text-gray-800{{ end }}">{{ .Name }}</a>
+                text-base md:text-lg hover:text-gray-800{{ end }}">{{ .Name }}</a>
             {{- end }}
           </nav>
         </div>
