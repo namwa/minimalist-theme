@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
   {{ end }}
 
-  <title>
+  {{/* <title>
     {{- if .IsHome -}}
       Home | {{ .Site.Title }}
     {{- else if .Page.Title -}}
@@ -48,5 +48,7 @@
     {{- else -}}
       {{ .Site.Title }}
     {{- end -}}
-  </title>
+  </title> */}}
+  {{ $title := default site.Title .Title }}
+  {{ with $title }}<title>{{ . }}</title>{{ end }}
 </head>
