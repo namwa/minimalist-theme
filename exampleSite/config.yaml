@@ -8,6 +8,7 @@ enableRobotsTXT: true
 summaryLength: 7
 
 paginate: 6
+enableEmoji: true
 favicon: /favicon.png
 
 menu:

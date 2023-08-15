@@ -108,3 +108,6 @@ The following HTML `<h1>`—`<h6>` elements represent six levels of section head
 ## Other Elements — mark
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
+## Support Emoji
+Emoji can be used in our content :smile:
