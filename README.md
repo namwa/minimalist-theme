@@ -4,6 +4,12 @@ Hugo Minimalist Theme is a portfolio and blogging theme.
 
 Live Demo: https://hugo-minimalist-theme.netlify.app
 
+## Features
+- Blogging section
+- Projects section
+- About section
+- Netlify form
+
 ## Requirements
 - Hugo Version 0.96+extended
 
@@ -25,6 +31,8 @@ hugo new site myNewHugoSite
 Hugo site will be created in `myNewHugoSite` folder.
 
 ## Install theme
+
+Minimalist theme is built with TailwindCSS.
 
 Clone this repo inside your `themes` folder.
 
@@ -60,16 +68,26 @@ Set up the configurations in `config.yaml`. [reference](https://github.com/namwa
 
 ## Run Hugo
 
+### Production
+
+Go to  `themes/minimalist-theme` directory and run `npm run build`.
+
 To generate the Hugo site, from the root folder ie `myNewHugoSite`
 ```
 hugo
 ```
 
-For local development run Hugo's built in local server.
+### Development
+
+Go to  `themes/minimalist-theme` directory and run `npm run watch` to adjust styles in TailwindCSS and
+see changes.
+
+Run Hugo's built in local server.
 ```
 hugo server
 ```
 Your local site will be served at `localhost:1313`.
+
 
 ## Create a blog post
 
@@ -90,3 +108,7 @@ hugo new projects/my-project.md
 ## Config summary length
 
 Use summaryLength variable in config.yaml to control number of words in the summary.
+
+### Caveat
+This theme uses postCSS so you might need to have postcss and postcss-cli installed globally.
+To install packages globally, run `npm i -g postcss postcss-cli`
