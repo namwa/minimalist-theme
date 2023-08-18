@@ -4,6 +4,8 @@
 - Improve font performance
 - Correct heading in blog
 - Revert CSS to a normal format
+- Increase footer text's contrast
+- Add preload to css link
 
 ## 0.2.0 - 18 Aug 2023
 
