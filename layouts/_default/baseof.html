@@ -13,6 +13,6 @@
     {{- partial "footer.html" . -}}
 
     {{ $scripts := resources.Get "js/index.js" -}}
-    <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
+    <script type="text/javascript" src="{{ $scripts.RelPermalink }}" async></script>
   </body>
 </html>

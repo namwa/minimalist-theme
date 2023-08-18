@@ -25,10 +25,6 @@
   <link rel="icon" href={{ .Site.Params.favicon | default "/favicon.png" }} type="image/gif">
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  {{/* Font */}}
-  <link rel="preconnect" href="https://rsms.me/">
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-
   {{/* Internal templates */}}
   {{- template "_internal/twitter_cards.html" . -}}
 
@@ -37,18 +33,11 @@
   <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
   {{- else }}
   {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
-  {{ end }}
+  {{/* <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/> */}}
+  <link rel="preload" href="{{ $styles.RelPermalink }}" as="style" integrity="{{ $styles.Data.Integrity }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
+  {{- end }}
 
-  {{/* <title>
-    {{- if .IsHome -}}
-      Home | {{ .Site.Title }}
-    {{- else if .Page.Title -}}
-      {{ .Page.Title }} | {{ .Site.Title }}
-    {{- else -}}
-      {{ .Site.Title }}
-    {{- end -}}
-  </title> */}}
   {{ $title := default site.Title .Title }}
   {{ with $title }}<title>{{ . }}</title>{{ end }}
 </head>
