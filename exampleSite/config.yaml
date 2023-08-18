@@ -35,6 +35,7 @@ markup:
     endLevel: 3
   highlight:
     lineNos: true
+    style: emacs
   #Removing IDs from headings
   goldmark:
     parser:

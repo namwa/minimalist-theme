@@ -61,17 +61,13 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 ## Code Blocks
 
-``` html
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Example HTML5 Document</title>
-    </head>
-    <body>
-        <p>Test</p>
-    </body>
-</html>
+```javascript {linenos=inline, hl_lines="4-6"}
+function addOne(number) {
+    return number + 1;
+}
+function addTwo(number) {
+    return number + 2;
+}
 ```
 
 ## List Types
