@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 - 18 Aug 2023
+- Improve font performance
+- Correct heading in blog
+- Revert CSS to a normal format
 
 ## 0.2.0 - 18 Aug 2023
 
