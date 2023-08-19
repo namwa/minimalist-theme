@@ -5,16 +5,15 @@
       {{ with .Title -}}
       <h1 class="title leading-10 text-center pb-4 md:pb-10">{{ . }}</h1>
       {{ end -}}
-      {{ if .Params.author -}}
-      <div class="md:mt-6 mb-4 text-center text-base md:text-lg text-gray-700">
-        <span>{{ .Params.author }}</span>
-        <span class="px-1">|</span>
-        <span>{{ .Date.Format "2 Jan 2006" }}</span>
-      </div>
-      {{- end }}
 
+      <div class="md:mt-6 mb-4 text-center text-base md:text-lg">
+        {{ if .Params.author -}}
+        <p class="text-gray-700">{{ .Params.author }}</p>
+        {{- end }}
+        <p class="text-gray-600">{{ .Date.Format "2 Jan 2006" }}</p>
+      </div>
       <div class="text-center mb-10">
-        <span class="text-gray-700 text-base">Reading time {{ .ReadingTime }} mins.</span>
+        <span class="text-gray-600 text-base">Reading time {{ .ReadingTime }} mins.</span>
       </div>
 
       {{ partial "webp_image.html" . }}

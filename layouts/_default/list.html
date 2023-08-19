@@ -8,7 +8,7 @@
       {{ with .RegularPages -}}
       {{ range . -}}
       <a href="{{ .Permalink }}" class="block py-6 border-b border-gray-200 md:max-w-lg">
-        {{/* <p class="text-base text-gray-600">{{ dateFormat "2 Jan 2006" .Date }}</p> */}}
+        <p class="text-base text-gray-600">{{ dateFormat "2 Jan 2006" .Date }}</p>
         <div class="group hover:text-fuchsia-600">
           <h3 class="group-hover:text-fuchsia-600 text-gray-700 text-lg md:text-2xl my-2">{{ .Title }}</h3>
           <p class="text-gray-600 text-lg">{{ .Params.description }}</p>

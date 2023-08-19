@@ -1,6 +1,11 @@
 # Changelog
 
+## 0.4.0 - 19 Aug 2023
+
+- Add date to blog page and blog list page
+
 ## 0.3.0 - 18 Aug 2023
+
 - Improve font performance
 - Correct heading in blog
 - Revert CSS to a normal format
