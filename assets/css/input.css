@@ -87,7 +87,7 @@
     sm:text-sm sm:leading-6;
   }
   code {
-    @apply text-fuchsia-600 font-mono;
+    @apply text-fuchsia-600 font-mono text-base;
   }
   .content {
     @apply mx-auto max-w-3xl;
@@ -118,13 +118,13 @@
     @apply font-bold;
   }
   .content ul, ol {
-    @apply my-2;
+    @apply my-2 text-lg;
   }
   .content ol > li {
-    @apply list-decimal;
+    @apply list-decimal list-inside text-lg;
   }
   .content li {
-    @apply ml-4 list-disc;
+    @apply ml-4 list-disc list-inside text-lg;
   }
   .content .highlight {
     @apply py-4;

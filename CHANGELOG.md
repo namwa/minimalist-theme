@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0 - 20 Aug 2023
+
+- Consistent font size for list
+
 ## 0.4.0 - 19 Aug 2023
 
 - Add date to blog page and blog list page
