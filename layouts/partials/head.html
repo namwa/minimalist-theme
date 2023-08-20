@@ -33,8 +33,7 @@
   <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
   {{- else }}
   {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
-  <link rel="preload" href="{{ $styles.RelPermalink }}" as="style" />
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
+  <link rel="preload stylesheet" as="style" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
   {{- end }}
 
   {{ $title := default site.Title .Title }}
