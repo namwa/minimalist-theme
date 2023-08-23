@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0 - 23 Aug 2023
+
+- Responsive image shortcode and partial
+
 ## 0.5.0 - 20 Aug 2023
 
 - Consistent font size for list
