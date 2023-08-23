@@ -19,6 +19,6 @@ cubilia curae; Fusce diam justo, dictum ut leo sit amet, hendrerit varius neque.
 tortor mauris. Aliquam aliquam tempus mauris nec venenatis. In in massa vitae leo malesuada
 laoreet eget eu mi.
 
-## An image below is generated from picture shortcode
+## An image below is generated from imageh shortcode
 
-{{< picture path="/images/development.jpg" alt="My design image" >}}
+{{< imageh src="development.jpg" alt="Photo of a development work" >}}
