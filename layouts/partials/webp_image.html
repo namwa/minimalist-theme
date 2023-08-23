@@ -1,11 +1,38 @@
 {{ $br := .Scratch.Get "br" | default "rounded-md" }}
 
 {{- $image := .Resources.GetMatch "cover.*" -}}
+{{- $respSizes := slice "320" "640" "1280" -}}
+{{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
 {{ if $image }}
-{{ $webp := $image.Resize (printf "%dx%d webp picture" $image.Width $image.Height) -}}
 <picture class="aspect-[16/9] w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
-  <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-  <img src="{{ $image.RelPermalink }}"
+  <source
+    type="image/webp"
+    srcset="
+    {{- with $respSizes -}}
+      {{- range $i, $e := . -}}
+        {{- if ge $image.Width . -}}
+          {{- if $i }}, {{ end -}}{{- ($image.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}"
+    sizes="{{ $dataSzes }}"
+  />
+  <source
+    type="image/jpeg"
+    srcset="
+    {{- with $respSizes -}}
+      {{- range $i, $e := . -}}
+        {{- if ge $image.Width . -}}
+          {{- if $i }}, {{ end -}}{{- ($image.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}"
+    sizes="{{ $dataSzes }}"
+  />
+  <img
+    src="{{ $image.RelPermalink }}"
+    width="{{ $image.Width }}"
+    height="{{ $image.Height }}"
     loading="lazy"
     alt="{{ .Title }}"
     class="aspect-[16/9] w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2] {{$br}} "
