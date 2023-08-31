@@ -1,10 +1,10 @@
-{{- $respSizes := slice "320" "640" "1280" -}}
+{{- $respSizes := slice "320" "640" "1200" -}}
 {{- $imgBase := "images/" -}}
 
 {{- $src := resources.Get (printf "%s%s" $imgBase (.Get "src")) -}}
 {{- $alt := .Get "alt" -}}
 
-{{- $imgClass := "w-full h-auto animate-fade" -}}
+{{- $imgClass := "aspect-[16/9] w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]" -}}
 {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
 
 {{- $LQIP_img := $src.Resize "20x jpg" -}}
@@ -39,7 +39,8 @@
     {{- end -}}"
     sizes="{{ $dataSzes }}"
   />
-  <img class="{{ $imgClass }}"
+  <img
+    class="{{ $imgClass }}"
     src="{{ $actualImg.RelPermalink }}"
     width="{{ $src.Width }}"
     height="{{ $src.Height }}"

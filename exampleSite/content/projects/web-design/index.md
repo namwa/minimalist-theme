@@ -38,14 +38,10 @@ quem bis cuius crede sparsas diversa diva. A inquit cingebant. Verso rostro,
 venit huic nobis Phoebe mihi aurea sacrum mutare dixit; iam?
 
 ```javascript
-document.addEventListener("DOMContentLoaded", function(event) {
-  let e = document.getElementById("myForm");
-  e.addEventListener( "change", function() {
-    var myColor = this.color.value;
-    if (myColor == "Blue") {
-      document.getElementById("msg").innerHTML = "Just like the sky!";
-    }
-  }, false);
+for (let step = 0; step < 5; step++) {
+    // Runs 5 times, with values of step 0 through 4.
+    console.log("Walking east one step");
+}
 ```
 
 ## Nulla facilisi

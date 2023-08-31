@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.0 - 31 Aug 2023
+- Correct HTML heading hierarchy
+- Correct img responsive sizes
+- CSS class applies to img tag instead of picture tag
+
 ## 0.6.0 - 23 Aug 2023
 
 - Responsive image shortcode and partial

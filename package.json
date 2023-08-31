@@ -1,6 +1,6 @@
 {
   "name": "minimalist-theme",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Hugo Minimalist Theme is a portfolio and blogging theme.",
   "main": "index.js",
   "scripts": {

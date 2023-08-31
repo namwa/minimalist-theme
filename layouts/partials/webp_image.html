@@ -1,10 +1,10 @@
 {{ $br := .Scratch.Get "br" | default "rounded-md" }}
 
 {{- $image := .Resources.GetMatch "cover.*" -}}
-{{- $respSizes := slice "320" "640" "1280" -}}
+{{- $respSizes := slice "320" "640" "1200" -}}
 {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
 {{ if $image }}
-<picture class="aspect-[16/9] w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+<picture>
   <source
     type="image/webp"
     srcset="
@@ -30,6 +30,7 @@
     sizes="{{ $dataSzes }}"
   />
   <img
+    alt={{ .Title }}
     src="{{ $image.RelPermalink }}"
     width="{{ $image.Width }}"
     height="{{ $image.Height }}"
