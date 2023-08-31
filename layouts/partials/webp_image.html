@@ -2,7 +2,7 @@
 
 {{- $image := .Resources.GetMatch "cover.*" -}}
 {{- $respSizes := slice "320" "640" "1200" -}}
-{{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
+{{- $dataSzes := "(min-width: 1024px) 50vw, 100vw" -}}
 {{ if $image }}
 <picture>
   <source

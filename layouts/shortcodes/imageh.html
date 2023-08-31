@@ -5,7 +5,7 @@
 {{- $alt := .Get "alt" -}}
 
 {{- $imgClass := "aspect-[16/9] w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]" -}}
-{{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
+{{- $dataSzes := "(min-width: 1024px) 50vw, 100vw" -}}
 
 {{- $LQIP_img := $src.Resize "20x jpg" -}}
 {{- $LQIP_b64 := $LQIP_img.Content | base64Encode -}}
