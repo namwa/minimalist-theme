@@ -89,9 +89,7 @@
   code {
     @apply text-fuchsia-600 font-mono text-base;
   }
-  .content {
-    @apply mx-auto max-w-3xl;
-  }
+
   .content h1 {
     @apply py-4 text-4xl;
   }

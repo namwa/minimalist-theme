@@ -1,6 +1,11 @@
 # Changelog
 
+## 0.8.0 - 1 Sep 2023
+
+- Fixed layout on screen width 1024px
+
 ## 0.7.0 - 31 Aug 2023
+
 - Correct HTML heading hierarchy
 - Correct img responsive sizes
 - CSS class applies to img tag instead of picture tag
