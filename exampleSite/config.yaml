@@ -39,7 +39,7 @@ markup:
   #Removing IDs from headings
   goldmark:
     parser:
-      autoHeadingID: false
+      autoHeadingID: true
 
 params:
   title: Jane's Doe
