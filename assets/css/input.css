@@ -125,9 +125,9 @@
     @apply ml-4 list-disc list-inside text-lg;
   }
   .content .highlight {
-    @apply py-4;
+    @apply py-4 overflow-x-scroll;
   }
-  .content .highlight pre {
+  .content .highlight > pre {
     @apply py-4 px-4 font-mono overflow-x-scroll;
   }
   .content blockquote {
