@@ -3,7 +3,6 @@ languageCode: en-us
 title: Jane Doe
 theme: minimalist-theme
 themesDir: ../..
-disableHugoGeneratorInject: true
 enableRobotsTXT: true
 summaryLength: 7
 
@@ -36,7 +35,6 @@ markup:
   highlight:
     lineNos: true
     style: emacs
-  #Removing IDs from headings
   goldmark:
     parser:
       autoHeadingID: true
