@@ -4,7 +4,7 @@
 {{- $src := resources.Get (printf "%s%s" $imgBase (.Get "src")) -}}
 {{- $alt := .Get "alt" -}}
 
-{{- $imgClass := "aspect-[16/9] w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]" -}}
+{{- $imgClass := "w-full object-cover" -}}
 {{- $dataSzes := "(min-width: 1024px) 50vw, 100vw" -}}
 
 {{- $LQIP_img := $src.Resize "20x jpg" -}}
