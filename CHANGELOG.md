@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0 - 24 Jan 2024
+
+- Add codepen shortcode
+
 ## 0.8.0 - 1 Sep 2023
 
 - Fixed layout on screen width 1024px
