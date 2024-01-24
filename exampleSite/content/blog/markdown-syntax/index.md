@@ -107,3 +107,7 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 
 ## Support Emoji
 Emoji can be used in our content :smile:
+
+## Codepen shortcode
+
+{{< codepen id="#######" >}}

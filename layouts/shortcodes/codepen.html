@@ -1,7 +1,7 @@
 {{/* DEFAULTS */}}
-{{ $user    := "your_username" }}
-{{ $height  := 500 }}
-{{ $tab     := "result" }}{{/* html|css|js|result */}}
+{{ $user    := .Site.Params.username }}
+{{ $height  := .Site.Params.height }}
+{{ $tab     := .Site.Params.tab }}{{/* html|css|js|result */}}
 {{ $theme   := 8862 }}{{/* create on codepen.io */}}
 
 <script

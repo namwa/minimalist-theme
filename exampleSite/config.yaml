@@ -46,9 +46,14 @@ params:
     - /images/author.jpg
   twitter: https://twitter.com
 
-
+  # gtm: GTM-xxxxxxx
   gtm_id: GTM-xxxxxxx
   googleAnalytics: G-MEASUREMENT_ID
+
+  # codepen
+  username: your_username
+  height: 500
+  tab: result
 
   # Hero section
   hero:
