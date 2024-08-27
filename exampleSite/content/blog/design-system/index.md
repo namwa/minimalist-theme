@@ -2,6 +2,7 @@
 title: "What is design system"
 description: "consectetur adipiscing elit. Curabitur imperdiet mi maximus"
 date: 2022-07-02T22:16:18+01:00
+lastmod: 2024-08-25T13:16:28+01:00
 draft: false
 featured_image: "development.jpg"
 tags:

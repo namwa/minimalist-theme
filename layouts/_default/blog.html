@@ -10,7 +10,26 @@
         {{ if .Params.author -}}
         <p class="text-gray-700">{{ .Params.author }}</p>
         {{- end }}
-        <p class="text-gray-600">{{ .Date.Format "2 Jan 2006" }}</p>
+        <!-- Created Date -->
+        {{- $pubdate := .PublishDate.Format "2 Jan 2006" }}
+        {{- $lastmod := .Lastmod.Format "2 Jan 2006" }}
+        <p class="text-gray-600  {{- if ne $lastmod $pubdate }} line-through {{- end }}">
+          Created:
+          <time datetime="{{ .PublishDate }}" title="{{ .PublishDate }}">
+            {{ $pubdate }}
+          </time>
+        </p>
+        <!-- Last Updated Date -->
+        {{- if .Lastmod }}
+          {{- if ne $lastmod $pubdate }}
+          <div class="text-gray-600">
+            Updated:
+            <time datetime="{{ .Lastmod }}" title="{{ .Lastmod }}">
+              {{ $lastmod }}
+            </time>
+          </div>
+          {{- end }}
+        {{- end }}
       </div>
       <div class="text-center mb-10">
         <span class="text-gray-600 text-base">Reading time {{ .ReadingTime }} mins.</span>

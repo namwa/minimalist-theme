@@ -94,7 +94,7 @@ Your local site will be served at `localhost:1313`.
 To create a blog post uses a command below. It will create a new blog type of content
 file based on the archetype template. Blog type archetype includes tags and toc (table of content).
 ```
-hugo new blog/my-first-post.md
+hugo new blog/<folder-name>/index.md
 ```
 
 ## Create a project
@@ -102,7 +102,7 @@ hugo new blog/my-first-post.md
 To create a new project using a default archetype.
 
 ```
-hugo new projects/my-project.md
+hugo new projects/<folder-name>index.md
 ```
 
 ## Config summary length
