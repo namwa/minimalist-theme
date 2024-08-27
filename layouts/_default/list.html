@@ -6,7 +6,7 @@
   <div class="grid md:grid-cols-10">
     <div class="md:col-span-7">
       {{ with .RegularPages -}}
-      {{ range . -}}
+      {{ range ( where site.RegularPages.ByLastmod.Reverse "Section" "blog" | first 6 ) }}
       <a href="{{ .Permalink }}" class="block py-6 border-b border-gray-200 md:max-w-lg">
         {{/* <p class="text-base text-gray-600/80">{{ dateFormat "2 Jan 2006" .Date }}</p> */}}
 
