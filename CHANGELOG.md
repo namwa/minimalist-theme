@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.10.0 - 27 Aug 2024
+
+- Blog post shows last modified date
+- List blog posts based on last modified date
+- Update dependencies
+
 ## 0.9.0 - 24 Jan 2024
 
 - Add codepen shortcode

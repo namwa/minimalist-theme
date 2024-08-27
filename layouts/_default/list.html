@@ -6,9 +6,29 @@
   <div class="grid md:grid-cols-10">
     <div class="md:col-span-7">
       {{ with .RegularPages -}}
-      {{ range . -}}
+      {{ range ( where site.RegularPages.ByLastmod.Reverse "Section" "blog" | first 6 ) }}
       <a href="{{ .Permalink }}" class="block py-6 border-b border-gray-200 md:max-w-lg">
-        <p class="text-base text-gray-600/80">{{ dateFormat "2 Jan 2006" .Date }}</p>
+        {{/* <p class="text-base text-gray-600/80">{{ dateFormat "2 Jan 2006" .Date }}</p> */}}
+
+        <!-- Created Date -->
+        {{- $pubdate := .PublishDate.Format "2 Jan 2006" }}
+        {{- $lastmod := .Lastmod.Format "2 Jan 2006" }}
+        <p class="text-base text-gray-600/80 {{- if ne $lastmod $pubdate }} hidden {{- end }}">
+          <time datetime="{{ .PublishDate }}" title="{{ .PublishDate }}">
+            {{ $pubdate }}
+          </time>
+        </p>
+        <!-- Last Updated Date -->
+        {{- if .Lastmod }}
+          {{- if ne $lastmod $pubdate }}
+          <div class="text-base text-gray-600/80">
+            Updated:
+            <time datetime="{{ .Lastmod }}" title="{{ .Lastmod }}">
+              {{ $lastmod }}
+            </time>
+          </div>
+          {{- end }}
+        {{- end }}
         <div class="group hover:text-fuchsia-600">
           <h2 class="group-hover:text-fuchsia-600 text-gray-800 text-lg md:text-2xl my-2">{{ .Title }}</h2>
           <p class="text-gray-700 text-base">{{ .Params.description }}</p>
